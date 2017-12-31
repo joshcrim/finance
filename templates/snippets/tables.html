@@ -1,7 +1,23 @@
 {% import 'snippets/buttons.html' as buttons %}
 
 
-{% macro transactions(transaction_list) %}
+{% macro transactions(transaction_list, payday) %}
+
+    <table class="pure-table pure-table-horizontal borderless">
+      {% for x in transaction_list %}
+        {% set delete_url = url_for('delete_payday_transaction', payday=payday, transaction_id=x.id) %}
+        <tr>
+          <td>{{ x.name }}</td>
+          <td>${{ x.amount }}</td>
+          <td>{{ buttons.delete(delete_url) }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+
+{% endmacro %}
+
+
+{% macro recurring_transactions(transaction_list) %}
 
     <table class="pure-table pure-table-horizontal borderless">
       {% for x in transaction_list %}
@@ -15,3 +31,4 @@
     </table>
 
 {% endmacro %}
+
