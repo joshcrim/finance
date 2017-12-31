@@ -156,7 +156,7 @@ class WalletUpdater(object):
         for income in self.wallet.recurring_incomes:
             payday.new_income(income)
 
-        for expense in self.wallet.recurring_incomes:
+        for expense in self.wallet.recurring_expenses:
             payday.new_income(expense)
 
         self.wallet.paydays.append(payday)
