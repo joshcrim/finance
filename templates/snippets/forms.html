@@ -1,0 +1,18 @@
+{% import 'snippets/buttons.html' as buttons %}
+
+
+{% macro stacked(form, url='', legend='') %}
+
+    <form method="post" class="transaction-form pure-form pure-form-stacked" action="{{ url }}">
+      <fieldset>
+        {% if legend %}<legend>{{ legend }}</legend>{% endif %}
+
+        {% for field in form %}
+            {{ field(class="pure-input-1", placeholder=field.label.text) }}
+        {% endfor %}
+
+        {{ buttons.form_submit() }}
+      </fieldset>
+    </form>
+
+{% endmacro %}
