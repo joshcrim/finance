@@ -5,7 +5,7 @@ import jsonpickle
 import os
 import sys
 
-from server.models import Wallet
+from f_python.models import Wallet
 
 jsonpickle.set_encoder_options('json', indent=4)
 

@@ -1,11 +1,11 @@
 from flask import Flask, redirect, request, render_template, url_for
-from server.forms import TransactionForm, WalletForm
-from server.models import Wallet
+from f_python.forms import TransactionForm, WalletForm
+from f_python.models import Wallet
 
 app = Flask(
     __name__,
-    template_folder='../templates/',
-    static_folder='../static')
+    template_folder='./templates/',
+    static_folder='./static')
 
 
 #

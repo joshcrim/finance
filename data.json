@@ -14,28 +14,9 @@
             null
         ]
     },
-    "recurring_expenses": [
-        {
-            "py/id": 6
-        },
-        {
-            "py/id": 8
-        },
-        {
-            "py/id": 10
-        },
-        {
-            "py/id": 12
-        }
-    ],
-    "updater": {
-        "py/object": "server.models.WalletUpdater",
-        "wallet": {
-            "py/id": 0
-        }
-    },
     "paydays": [
         {
+            "py/object": "f_python.models.Payday",
             "date": {
                 "py/object": "datetime.date",
                 "__reduce__": [
@@ -47,113 +28,11 @@
                     ]
                 ]
             },
-            "py/object": "server.models.Payday",
-            "expenses": [
-                {
-                    "py/object": "server.models.Transaction",
-                    "name": "Leesa Rent",
-                    "id": 2,
-                    "_amount": {
-                        "py/reduce": [
-                            {
-                                "py/type": "decimal.Decimal"
-                            },
-                            {
-                                "py/tuple": [
-                                    "320"
-                                ]
-                            },
-                            null,
-                            null,
-                            null
-                        ]
-                    }
-                },
-                {
-                    "py/object": "server.models.Transaction",
-                    "name": "Cell Phones",
-                    "id": 3,
-                    "_amount": {
-                        "py/reduce": [
-                            {
-                                "py/type": "decimal.Decimal"
-                            },
-                            {
-                                "py/tuple": [
-                                    "60"
-                                ]
-                            },
-                            null,
-                            null,
-                            null
-                        ]
-                    }
-                },
-                {
-                    "py/object": "server.models.Transaction",
-                    "name": "Insurance",
-                    "id": 4,
-                    "_amount": {
-                        "py/reduce": [
-                            {
-                                "py/type": "decimal.Decimal"
-                            },
-                            {
-                                "py/tuple": [
-                                    "40"
-                                ]
-                            },
-                            null,
-                            null,
-                            null
-                        ]
-                    }
-                },
-                {
-                    "py/object": "server.models.Transaction",
-                    "name": "Spending",
-                    "id": 5,
-                    "_amount": {
-                        "py/reduce": [
-                            {
-                                "py/type": "decimal.Decimal"
-                            },
-                            {
-                                "py/tuple": [
-                                    "400"
-                                ]
-                            },
-                            null,
-                            null,
-                            null
-                        ]
-                    }
-                }
-            ],
-            "incomes": [
-                {
-                    "py/object": "server.models.Transaction",
-                    "name": "Titan",
-                    "id": 1,
-                    "_amount": {
-                        "py/reduce": [
-                            {
-                                "py/type": "decimal.Decimal"
-                            },
-                            {
-                                "py/tuple": [
-                                    "3300"
-                                ]
-                            },
-                            null,
-                            null,
-                            null
-                        ]
-                    }
-                }
-            ]
+            "expenses": [],
+            "incomes": []
         },
         {
+            "py/object": "f_python.models.Payday",
             "date": {
                 "py/object": "datetime.date",
                 "__reduce__": [
@@ -165,28 +44,11 @@
                     ]
                 ]
             },
-            "py/object": "server.models.Payday",
-            "expenses": [
-                {
-                    "py/id": 6
-                },
-                {
-                    "py/id": 8
-                },
-                {
-                    "py/id": 10
-                },
-                {
-                    "py/id": 12
-                }
-            ],
-            "incomes": [
-                {
-                    "py/id": 15
-                }
-            ]
+            "expenses": [],
+            "incomes": []
         },
         {
+            "py/object": "f_python.models.Payday",
             "date": {
                 "py/object": "datetime.date",
                 "__reduce__": [
@@ -198,48 +60,11 @@
                     ]
                 ]
             },
-            "py/object": "server.models.Payday",
-            "expenses": [
-                {
-                    "py/id": 6
-                },
-                {
-                    "py/id": 8
-                },
-                {
-                    "py/id": 10
-                },
-                {
-                    "py/id": 12
-                },
-                {
-                    "py/object": "server.models.Transaction",
-                    "name": "Taxes",
-                    "id": 1,
-                    "_amount": {
-                        "py/reduce": [
-                            {
-                                "py/type": "decimal.Decimal"
-                            },
-                            {
-                                "py/tuple": [
-                                    "21000"
-                                ]
-                            },
-                            null,
-                            null,
-                            null
-                        ]
-                    }
-                }
-            ],
-            "incomes": [
-                {
-                    "py/id": 15
-                }
-            ]
+            "expenses": [],
+            "incomes": []
         },
         {
+            "py/object": "f_python.models.Payday",
             "date": {
                 "py/object": "datetime.date",
                 "__reduce__": [
@@ -251,28 +76,11 @@
                     ]
                 ]
             },
-            "py/object": "server.models.Payday",
-            "expenses": [
-                {
-                    "py/id": 6
-                },
-                {
-                    "py/id": 8
-                },
-                {
-                    "py/id": 10
-                },
-                {
-                    "py/id": 12
-                }
-            ],
-            "incomes": [
-                {
-                    "py/id": 15
-                }
-            ]
+            "expenses": [],
+            "incomes": []
         },
         {
+            "py/object": "f_python.models.Payday",
             "date": {
                 "py/object": "datetime.date",
                 "__reduce__": [
@@ -284,28 +92,11 @@
                     ]
                 ]
             },
-            "py/object": "server.models.Payday",
-            "expenses": [
-                {
-                    "py/id": 6
-                },
-                {
-                    "py/id": 8
-                },
-                {
-                    "py/id": 10
-                },
-                {
-                    "py/id": 12
-                }
-            ],
-            "incomes": [
-                {
-                    "py/id": 15
-                }
-            ]
+            "expenses": [],
+            "incomes": []
         },
         {
+            "py/object": "f_python.models.Payday",
             "date": {
                 "py/object": "datetime.date",
                 "__reduce__": [
@@ -317,28 +108,11 @@
                     ]
                 ]
             },
-            "py/object": "server.models.Payday",
-            "expenses": [
-                {
-                    "py/id": 6
-                },
-                {
-                    "py/id": 8
-                },
-                {
-                    "py/id": 10
-                },
-                {
-                    "py/id": 12
-                }
-            ],
-            "incomes": [
-                {
-                    "py/id": 15
-                }
-            ]
+            "expenses": [],
+            "incomes": []
         },
         {
+            "py/object": "f_python.models.Payday",
             "date": {
                 "py/object": "datetime.date",
                 "__reduce__": [
@@ -350,28 +124,11 @@
                     ]
                 ]
             },
-            "py/object": "server.models.Payday",
-            "expenses": [
-                {
-                    "py/id": 6
-                },
-                {
-                    "py/id": 8
-                },
-                {
-                    "py/id": 10
-                },
-                {
-                    "py/id": 12
-                }
-            ],
-            "incomes": [
-                {
-                    "py/id": 15
-                }
-            ]
+            "expenses": [],
+            "incomes": []
         },
         {
+            "py/object": "f_python.models.Payday",
             "date": {
                 "py/object": "datetime.date",
                 "__reduce__": [
@@ -383,28 +140,11 @@
                     ]
                 ]
             },
-            "py/object": "server.models.Payday",
-            "expenses": [
-                {
-                    "py/id": 6
-                },
-                {
-                    "py/id": 8
-                },
-                {
-                    "py/id": 10
-                },
-                {
-                    "py/id": 12
-                }
-            ],
-            "incomes": [
-                {
-                    "py/id": 15
-                }
-            ]
+            "expenses": [],
+            "incomes": []
         },
         {
+            "py/object": "f_python.models.Payday",
             "date": {
                 "py/object": "datetime.date",
                 "__reduce__": [
@@ -416,28 +156,11 @@
                     ]
                 ]
             },
-            "py/object": "server.models.Payday",
-            "expenses": [
-                {
-                    "py/id": 6
-                },
-                {
-                    "py/id": 8
-                },
-                {
-                    "py/id": 10
-                },
-                {
-                    "py/id": 12
-                }
-            ],
-            "incomes": [
-                {
-                    "py/id": 15
-                }
-            ]
+            "expenses": [],
+            "incomes": []
         },
         {
+            "py/object": "f_python.models.Payday",
             "date": {
                 "py/object": "datetime.date",
                 "__reduce__": [
@@ -449,32 +172,17 @@
                     ]
                 ]
             },
-            "py/object": "server.models.Payday",
-            "expenses": [
-                {
-                    "py/id": 6
-                },
-                {
-                    "py/id": 8
-                },
-                {
-                    "py/id": 10
-                },
-                {
-                    "py/id": 12
-                }
-            ],
-            "incomes": [
-                {
-                    "py/id": 15
-                }
-            ]
+            "expenses": [],
+            "incomes": []
         }
     ],
-    "recurring_incomes": [
-        {
-            "py/id": 15
+    "py/object": "f_python.models.Wallet",
+    "recurring_expenses": [],
+    "updater": {
+        "py/object": "f_python.models.WalletUpdater",
+        "wallet": {
+            "py/id": 0
         }
-    ],
-    "py/object": "server.models.Wallet"
+    },
+    "recurring_incomes": []
 }
