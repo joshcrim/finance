@@ -5,7 +5,7 @@ import jsonpickle
 import os
 import sys
 
-from models import Wallet
+from server.models import Wallet
 
 jsonpickle.set_encoder_options('json', indent=4)
 
@@ -92,7 +92,7 @@ if __name__ == '__main__':
 
         date = parse(input("Enter next payday: ")).date()
         wallet = Wallet(date)
-        wallet.create_paydays()
+        wallet.updater.create_paydays()
 
         with open('data.json', 'w') as file:
             file.write(jsonpickle.encode(wallet))
