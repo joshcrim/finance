@@ -18,6 +18,9 @@ def transaction(trans):
     if not isinstance(trans, Transaction):
         name, amount = trans
 
+        # This is broken. transaction_id resets to 0 every time
+        # the program is run, so multiple transaction end up with
+        # the same id.
         global transaction_id
         transaction_id += 1
 
