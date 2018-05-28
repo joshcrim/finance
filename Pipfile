@@ -3,8 +3,10 @@ url = "https://pypi.python.org/simple"
 verify_ssl = true
 
 [packages]
-dateparser = "*"
-jsonpickle = "*"
-crayons = "*"
 flask = "*"
 wtforms = "*"
+flask-sqlalchemy = "*"
+flask-login = "*"
+flask-wtf = "*"
+flask-migrate = "*"
+flask-restless = "*"

@@ -1,0 +1,22 @@
+{% import 'snippets/forms.html' as forms %}
+
+{% extends "base.html" %}
+
+{% block navigation %}{% endblock %}
+
+{% block content %}
+  <div class="pure-g">
+    <div class="pure-u-1-4"></div>
+    <div class="pure-u-5-8">
+    {% if pagetype == 'login' %}
+      {{ forms.stacked(form, url=url_for('auth.login'), legend="Login") }}
+      <a href="{{ url_for('auth.register') }}">Register</a>
+
+    {% else %}
+      {{ forms.stacked(form, url=url_for('auth.register'), legend="Register") }}
+      <a href="{{ url_for('auth.login') }}">Login</a>
+
+    {% endif %}
+    </div>
+  </div>
+{% endblock %}

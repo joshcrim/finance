@@ -1,0 +1,47 @@
+{% import 'snippets/buttons.html' as buttons %}
+
+
+{% macro transactions(transaction_list, payday, type) %}
+
+    <table class="pure-table pure-table-horizontal borderless">
+      {% for x in transaction_list %}
+        {% if type == 'income' %}
+          {% set delete_url = url_for('wallet.delete_payday_income', payday=payday, transaction_id=x.id) %}
+
+         {% else %}
+          {% set delete_url = url_for('wallet.delete_payday_expense', payday=payday, transaction_id=x.id) %}
+
+        {% endif %}
+
+        <tr>
+          <td>{{ x.name }}</td>
+          <td>${{ '{:,.2f}'.format(x.amount) }}</td>
+          <td>{{ buttons.delete(delete_url) }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+
+{% endmacro %}
+
+
+{% macro recurring_transactions(transaction_list, type) %}
+
+    <table class="pure-table pure-table-horizontal borderless">
+      {% for x in transaction_list %}
+        {% if type == 'income' %}
+          {% set delete_url = url_for('wallet.delete_recurring_income', transaction_id=x.id) %}
+
+        {% else %}
+          {% set delete_url = url_for('wallet.delete_recurring_expense', transaction_id=x.id) %}
+
+        {% endif %}
+
+        <tr>
+          <td>{{ x.name }}</td>
+          <td>${{ '{:,.2f}'.format(x.amount) }}</td>
+          <td>{{ buttons.delete(delete_url) }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+
+{% endmacro %}
