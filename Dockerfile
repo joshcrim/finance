@@ -13,5 +13,6 @@ RUN pip3 install -r requirements.txt
 ENV FLASK_APP app.py
 
 EXPOSE 80
+EXPOSE 443
 
-ENTRYPOINT [ "gunicorn", "--bind", "0.0.0.0:80", "app:app"  ]
+ENTRYPOINT [ "gunicorn", "--bind", ":80", "--bind", ":443", "app:app"  ]
