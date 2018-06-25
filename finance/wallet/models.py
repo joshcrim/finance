@@ -80,3 +80,11 @@ class Wallet(db.Model):
     recurring_expenses = db.relationship('RecurringExpense', backref='wallet', lazy='dynamic')
 
     balance = db.Column(db.Numeric(precision=10, decimal_return_scale=2))
+
+    @property
+    def recurring_income_sum(self):
+        return sum([i.amount for i in self.recurring_incomes.all()])
+
+    @property
+    def recurring_expense_sum(self):
+        return sum([e.amount for e in self.recurring_expenses.all()])

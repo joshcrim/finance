@@ -11,12 +11,12 @@
   <div class="pure-g">
 
     <div class="pure-u-3-8">
-      <h3>Income:</h3>
+      <h3>Income:</h3>&nbsp;&nbsp;&nbsp;&nbsp;<h4>{{ "${:,.2f}".format(wallet.recurring_income_sum) }}</h4>
       {{ tables.recurring_transactions(wallet.recurring_incomes, type='income') }}
     </div>
 
     <div class="pure-u-3-8">
-      <h3>Expenses:</h3>
+      <h3>Expenses:</h3>&nbsp;&nbsp;&nbsp;&nbsp;<h4>{{ "${:,.2f}".format(wallet.recurring_expense_sum) }}</h4>
       {{ tables.recurring_transactions(wallet.recurring_expenses, type='expense') }}
     </div>
 

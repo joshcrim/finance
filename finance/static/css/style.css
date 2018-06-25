@@ -6,6 +6,8 @@ body { height: 100%; color: #333; }
 a { text-decoration: none; color: #1b98f8; }
 h1 { display: inline-block; }
 h3 { display: inline-block; }
+h4 { display: inline-block; }
+h5 { display: inline-block; }
 
 /*
 * -- FORMS --

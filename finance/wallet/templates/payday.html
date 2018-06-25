@@ -7,20 +7,20 @@
 {% block content %}
 
 
-  <h1>{{ payday.date.strftime("%B %d") }}</h1>&nbsp;&nbsp;&nbsp;&nbsp;<h3>{{ "${:,.2f}".format(payday.savings_to_date) }}</h3>
+  <h1>{{ payday.date.strftime("%B %d") }}</h1>&nbsp;&nbsp;&nbsp;&nbsp;<h3>{{ "${:,.2f}".format(payday.savings) }}</h3>
 
   <br>
 
   <div class="pure-g">
     <div class="pure-u-3-8">
-      <h3>Income:</h3>
+      <h3>Income:</h3>&nbsp;&nbsp;&nbsp;&nbsp;<h4>{{ "${:,.2f}".format(payday.income_sum) }}</h4>
       {{ tables.transactions(payday.incomes.all(), payday=payday.id, type='income')}}
 
 
     </div>
 
     <div class="pure-u-3-8">
-      <h3>Expenses:</h3>
+      <h3>Expenses:</h3>&nbsp;&nbsp;&nbsp;&nbsp;<h4>{{ "${:,.2f}".format(payday.expense_sum) }}</h4>
       {{ tables.transactions(payday.expenses.all(), payday=payday.id, type='expense')}}
 
     </div>
