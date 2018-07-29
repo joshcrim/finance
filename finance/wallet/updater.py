@@ -40,12 +40,12 @@ class WalletUpdater(object):
 
     def update_savings(self):
         # Add the savings amount from all paydays before today to the wallet balance
-        payday_savings = sum([p.savings for p in self.wallet.paydays.filter(Payday.date < date.today())])
+        payday_savings = sum([p.savings for p in self.wallet.paydays.filter(Payday.date <= date.today())])
         self.wallet.balance = Decimal(self.wallet.balance) + payday_savings
 
     def update_paydays(self):
         # Remove the paydays before today
-        for payday in self.wallet.paydays.filter(Payday.date < date.today()):
+        for payday in self.wallet.paydays.filter(Payday.date <= date.today()):
             db.session.delete(payday)
 
         db.session.commit()
